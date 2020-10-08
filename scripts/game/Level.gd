@@ -21,11 +21,14 @@ func _process(delta):
 		Globals.psengine.send_input("restart");
 		
 	refresh_display();
+	
+	if Globals.psengine.is_level_complete():
+		Globals.open_level_end_menu(true)	
 
 func refresh_display():
 	var image = Globals.psengine.get_texture_for_display()
 	var texture = ImageTexture.new()
-	texture.create_from_image(image)
+	texture.create_from_image(image, 0);
 	#ResourceSaver.save("res://saved_texture.tres", texture)
 	#for some reason sometimes it didn't work before saving it as a texture and using the saved texture in the sprite
 	$Sprite.set_texture(texture);

@@ -49,6 +49,7 @@ func load_level(level_index):
 	current_level = level_index;
 	if game_scene != null:
 		game_scene.queue_free();
+		game_scene = null
 	for child in ui_center_slot.get_children():
 		child.queue_free()
 	game_scene = GAME_SCENE.instance()
@@ -59,6 +60,7 @@ func load_level(level_index):
 func open_main_menu():
 	if game_scene != null:
 		game_scene.queue_free()
+		game_scene = null
 	for child in ui_center_slot.get_children():
 		child.queue_free()
 	main_menu_scene = MAIN_MENU_SCENE.instance()

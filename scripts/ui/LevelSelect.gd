@@ -16,7 +16,7 @@ func _ready():
 
 func level_button_pressed(level_idx):
 	print("loading level "+str(level_idx))
-	Globals.load_level_with_character_select(level_idx)
+	Globals.load_level(level_idx)
 
 func _on_ButtonMainMenu_pressed():
 	Globals.open_main_menu();
