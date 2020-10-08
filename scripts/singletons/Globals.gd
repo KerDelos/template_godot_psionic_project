@@ -54,7 +54,6 @@ func load_level(level_index):
 	game_scene = GAME_SCENE.instance()
 	main_scene.add_child(game_scene)
 	psengine.load_level(level_index)
-	game_scene.init_tilemap();
 	get_tree().paused = false;
 
 func open_main_menu():
