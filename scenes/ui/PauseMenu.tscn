@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ui/PauseMenu.gd" type="Script" id=1]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "pause"
+
+[node name="ButtonResume" type="Button" parent="."]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 38.0
+text = "resume"
+
+[node name="ButtonMainMenu" type="Button" parent="."]
+margin_top = 42.0
+margin_right = 1024.0
+margin_bottom = 62.0
+text = "return to main menu"
+
+[connection signal="pressed" from="ButtonResume" to="." method="_on_ButtonResume_pressed"]
+[connection signal="pressed" from="ButtonMainMenu" to="." method="_on_ButtonMainMenu_pressed"]

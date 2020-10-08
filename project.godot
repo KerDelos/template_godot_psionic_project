@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="template_psionic_godot"
+run/main_scene="res://scenes/MainScene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://scripts/singletons/Globals.gd"
 
 [rendering]
 

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ui/MainMenu.gd" type="Script" id=1]
+
+[node name="Control" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "Template game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 86.0
+
+[node name="ButtonStart" type="Button" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 20.0
+text = "start"
+
+[node name="ButtonLevelSelect" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 1024.0
+margin_bottom = 44.0
+text = "select level"
+
+[node name="ButtonQuit" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 1024.0
+margin_bottom = 68.0
+text = "quit"
+
+[connection signal="pressed" from="VBoxContainer/ButtonStart" to="." method="_on_ButtonStart_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonLevelSelect" to="." method="_on_ButtonLevelSelect_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonQuit" to="." method="_on_ButtonQuit_pressed"]
