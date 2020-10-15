@@ -15,6 +15,8 @@ func _process(delta):
 		player_move_deltas = Globals.psengine.send_input("left")
 	if Input.is_action_just_pressed("ps_right"):
 		player_move_deltas = Globals.psengine.send_input("right")
+	if Input.is_action_just_pressed("ps_action"):
+		player_move_deltas = Globals.psengine.send_input("action")
 	if Input.is_action_just_pressed("ps_undo"):
 		Globals.psengine.send_input("undo");
 	if Input.is_action_just_pressed("ps_restart"):
